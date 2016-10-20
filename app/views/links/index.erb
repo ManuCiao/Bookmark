@@ -5,6 +5,7 @@
     <title></title>
   </head>
   <body>
+    <h1>Welcome!</h1>
     <h1>Links</h1>
       <ul id='links'>
         <% @links.each do |link| %>
@@ -20,6 +21,7 @@
         <input class="button" type="submit" value="Add Link"/>
       </form>
 
+      <%=@user.username%>
 
       <form action="/tags" method="GET">
         <label for="filter">
@@ -27,5 +29,6 @@
       </label>
       <input class="button" type="submit" value="Filter">
     </form>
+
   </body>
 </html>

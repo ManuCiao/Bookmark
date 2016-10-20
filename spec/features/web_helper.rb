@@ -26,3 +26,11 @@ def multiple_tags
   fill_in :tags, with: 'social media'
   click_button 'Add Link'
 end
+
+
+def register_user
+  visit "/links"
+  fill_in :username, with: 'admin'
+  fill_in :password, with: 'password'
+  click_button 'Sign Up'
+end
