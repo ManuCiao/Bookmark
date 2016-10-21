@@ -29,9 +29,8 @@ end
 
 
 def register_user
-  visit "/links"
+  visit "/links/login"
   fill_in :username, with: 'admin'
   fill_in :email, with: 'admin@admin.com'
-  fill_in :password, with: 'password'
   click_button 'Sign Up'
 end

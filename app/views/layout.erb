@@ -6,8 +6,8 @@
 
   <body>
     <% if current_user %>
-      Welcome, <%= current_user.username %>
+      Welcome <%= current_user.username.capitalize %>, <%= current_user.email %>
     <% end %>
-    <%= yield %> 
+    <%= yield %>
   </body>
 </html>
