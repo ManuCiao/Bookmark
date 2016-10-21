@@ -9,5 +9,7 @@ end
 feature 'User sign up' do
   scenario 'Mismatching password' do
     expect{ sign_up(password_confirmation: 'broom')}.not_to change(User, :count)
-  end  
+    expect(current_path).to eq('/add_user_data')
+    expect(page).to have_content 'Password and Verify Password are not matching!'
+  end
 end

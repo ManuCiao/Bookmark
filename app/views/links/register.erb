@@ -6,15 +6,15 @@
 </head>
 <body>
   <form action="/add_user_data" method="POST">
-    <label for="username">Username: </label>
-    <input name="username" type="text"/><br><br>
-    <label for="email">Email: </label>
-    <input name="email" type="text"/><br><br>
-    <label for="password">Password: </label>
+    <label for="username">Pick an Username: </label>
+    <input name="username" type="text"><br><br>
+    <label for="email">Enter your Email address: </label>
+    <input name="email" type="text" value='<%= @user.email %>'><br><br>
+    <label for="password">Choose a Password: </label>
     <input name="password" type="text"/><br><br>
-    <label for="password_confirmation">Confirm Password: </label>
+    <label for="password_confirmation">Verify Password: </label>
     <input name="password_confirmation" type="password"><br><br>
-    <input class="button" type="submit" value="Sign Up"/>
+    <input class="button" type="submit" value="Sign Up">
   </form>
 </body>
 </html>

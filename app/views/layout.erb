@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Bookmark Manager</title>
-  </head>
+<head>
+  <title>Bookmark Manager</title>
+</head>
 
   <body>
     <% if current_user %>
       Welcome <%= current_user.username.capitalize %>, <%= current_user.email %>
     <% end %>
+
+    <% if flash[:error] %>
+      <div id='error'><%= flash[:error] %></div>
+    <% end %>
+
     <%= yield %>
+
   </body>
 </html>
