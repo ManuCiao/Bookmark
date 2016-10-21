@@ -5,3 +5,9 @@ feature 'User sign up' do
     expect(User.first.email).to eq('admin@admin.com')
   end
 end
+
+feature 'User sign up' do
+  scenario 'Mismatching password' do
+    expect{ sign_up(password_confirmation: 'broom')}.not_to change(User, :count)
+  end  
+end
