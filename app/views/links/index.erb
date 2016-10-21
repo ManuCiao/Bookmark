@@ -5,7 +5,9 @@
     <title></title>
   </head>
   <body>
-    <h1>Welcome!</h1>
+    <% if @current_user %>
+    <h1>"Welcome, <%= @current_user.username%>!"</h1>
+    <% end %>
     <h1>Links</h1>
       <ul id='links'>
         <% @links.each do |link| %>
@@ -20,8 +22,6 @@
       <form action="/links/new" method="GET">
         <input class="button" type="submit" value="Add Link"/>
       </form>
-
-      <%=@user.username%>
 
       <form action="/tags" method="GET">
         <label for="filter">
